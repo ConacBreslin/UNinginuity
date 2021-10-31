@@ -5,12 +5,14 @@ html {
 }
 
 body {
-	background: url('/media/background.jpg') no-repeat center center fixed;
+	background: url('/media/skellig.jpg') no-repeat center center fixed;
 	background-size: cover;
+    background-color:aqua;
     height: calc(100vh - 164px);
     color: #fff;
     font-family: "'Open Sans', sans-serif;";
 }
+
 
 /* from Bulma */
 .icon {
@@ -21,17 +23,13 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
-    text-transform: uppercase;
-}
-
 .main-logo-link {
     width: fit-content;
 }
 
-.shop-now-button {
-    background: black;
-    color: white;
+.register-button {
+    background: #93b5e3;
+    color: #fff;
     min-width: 260px;
 }
 
@@ -40,18 +38,18 @@ body {
     color: white;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.register-button:hover,
+.register-button:active,
+.register-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: #4a7d34;
+    color: #93b5e3;
 }
 
-.text-black {
-    color: #000 !important;
+.text-white {
+    color: #fff !important;
 }
 
 .border-black {
