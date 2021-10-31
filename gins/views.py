@@ -1,6 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Gin
-
 
 
 def all_gins(request):
@@ -13,3 +12,15 @@ def all_gins(request):
     }
 
     return render(request, 'gins/gins.html', context)
+
+
+def individual_gin(request, gin_id):
+    """ A view to show individual gins """
+
+    gin = get_object_or_404(Gin, pk=gin_id)
+
+    context = {
+        'gin': gin,
+    }
+
+    return render(request, 'gins/individual_gin.html', context)
