@@ -9,9 +9,11 @@
             <!--Not just whole category like this they did ie?category=jeans" class="dropdown-item">Jeans</a>-->
             <div class="dropdown-menu border-0" aria-labelledby="distilleries-link">
                 <a href="{% url 'distilleries' %}" class="dropdown-item">All Distilleries</a>
-                <a href="" class="dropdown-item ">Distilleries with tours</a>
-                <a href="" class="dropdown-item">Distilleries by Location</a>
-                <a href="" class="dropdown-item ">Distilleries by Rating</a>                
+                <!--NOT REALLY SORT HERE BUT ONLY THOSE WHERE HAS_TOUR + TRUE-->
+                <a href="{% url 'distilleries' %}" class="dropdown-item ">Distilleries with tours</a>
+                <a href="{% url 'distilleries' %}?sort=location_province&direction=asc" class="dropdown-item">Distilleries by Province</a>
+                <a href="{% url 'distilleries' %}?sort=location_county&direction=asc" class="dropdown-item">Distilleries by County</a>
+                <a href="{% url 'distilleries' %}?sort=rating&direction=desc" class="dropdown-item ">Distilleries by Rating</a>                
             </div>
         </li>
         <li class="nav-item dropdown">
