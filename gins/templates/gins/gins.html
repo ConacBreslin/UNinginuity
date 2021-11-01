@@ -41,6 +41,14 @@
                                 <div class="row">
                                     <div class="col">
                                         <p class="lead mb-0 text-left font-weight-bold">€{{ gin.price }}</p>
+                                        {% if gin.distillery %}
+                                        <p class="small mt-1 mb-0">
+    <!--CB TO CHECK THIS I THINK THE DISTILLERY WILL NEED TO LINK TO THE DISTILLERY PAGE WHEN IT HAS BEEN MADE-->
+                                            <a class="text-muted" href="{% url 'gins' %}?distillery={{ gin.distillery.name }}">
+                                                <i class="fas fa-warehouse"></i> {{ gin.distillery.name }}
+                                            </a>
+                                        </p>
+                                        {% endif %}
                                         {% if gin.rating %}
                                             <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ gin.rating }} / 5</small>
                                         {% else %}
