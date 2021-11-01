@@ -2,7 +2,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
-from .models import Gin
+from django.db.models.functions import Lower
+from .models import Gin, Distillery
 
 
 def all_gins(request):

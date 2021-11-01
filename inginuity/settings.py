@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'home',
-    'gins'
+    'gins',
+    'distilleries',
 ]
 
 MIDDLEWARE = [
