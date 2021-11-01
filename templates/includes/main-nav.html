@@ -25,7 +25,7 @@
                 <a href="{% url 'gins' %}" class="dropdown-item">All Gins</a>
                 <a href="{% url 'gins' %}?sort=price&direction=asc" class="dropdown-item">Sort by Price</a>
                 <a href="{% url 'gins' %}?sort=rating&direction=desc" class="dropdown-item">Sort by Rating</a>
-                <a href="" class="dropdown-item">Sort by Flavour</a> 
+                <a href="{% url 'gins' %}?sort=distillery&direction=asc" class="dropdown-item">Sort by Distillery</a>
             </div>
         </li>
     </ul>

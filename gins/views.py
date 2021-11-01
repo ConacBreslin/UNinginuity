@@ -20,7 +20,8 @@ def all_gins(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 gins = gins.annotate(lower_name=Lower('name'))
-
+            if sortkey == 'distillery':
+                sortkey = 'distillery__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -37,9 +38,12 @@ def all_gins(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             gins = gins.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'gins': gins,
         'search_term': query,
+        'current_sorting': current_sorting,
     }
 
     return render(request, 'gins/gins.html', context)
