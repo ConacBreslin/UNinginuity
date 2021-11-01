@@ -4,6 +4,9 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="distilleries-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Distilleries
             </a>
+            <!--Bout-ADO queries and searches a bit different to mine and do I even need these?-->
+            <!--Mine need to filter a bit more-->
+            <!--Not just whole category like this they did ie?category=jeans" class="dropdown-item">Jeans</a>-->
             <div class="dropdown-menu border-0" aria-labelledby="distilleries-link">
                 <a href="" class="dropdown-item">All Distilleries</a>
                 <a href="" class="dropdown-item ">Distilleries with tours</a>
@@ -15,10 +18,13 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="gins-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Gins
             </a>
+            <!--Bout-ADO queries and searches a bit different to mine and do I even need these?-->
+            <!--Mine need to filter a bit more-->
+            <!--Not just whole category like this <a href="?category=jeans" class="dropdown-item">Jeans</a>-->
             <div class="dropdown-menu border-0" aria-labelledby="gins-link">
                 <a href="{% url 'gins' %}" class="dropdown-item">All Gins</a>
-                <a href="" class="dropdown-item">Sort by Price</a>
-                <a href="" class="dropdown-item">Sort by Rating</a>
+                <a href="{% url 'gins' %}?sort=price&direction=asc" class="dropdown-item">Sort by Price</a>
+                <a href="{% url 'gins' %}?sort=rating&direction=desc" class="dropdown-item">Sort by Rating</a>
                 <a href="" class="dropdown-item">Sort by Flavour</a> 
             </div>
         </li>

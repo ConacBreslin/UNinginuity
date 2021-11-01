@@ -9,6 +9,7 @@ class Distillery(models.Model):
     name = models.CharField(max_length=100, primary_key=True, null=False, blank=False)
     location_town = models.CharField(max_length=50, null=False, blank=False)
     location_county = models.CharField(max_length=10, null=False, blank=False)
+    location_province = models.CharField(max_length=10, null=True, blank=True)
     description = models.TextField()
     rating = models.DecimalField(max_digits=4, decimal_places=1, null=True, blank=True)
     has_visitor_centre = models.BooleanField(null=False, blank=False)
