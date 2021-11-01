@@ -26,12 +26,12 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                         <div class="card h-100 border-0">
                             {% if distillery.image %}
-                            <a href="{% url 'individual_distillery' distillery.id %}">
+                            <a href="{% url 'individual_distillery' distillery.name %}">
                                 <img class="card-img-top img-fluid" src="{{ distillery.image.url }}" alt="{{ distillery.name }}">
                             </a>
                             {% else %}
-                            <a href="{% url 'individual_distillery' distillery.id %}">
-                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}emptybottle.jpjg" alt="{{ distillery.name }}">
+                            <a href="{% url 'individual_distillery' distillery.name %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}emptybottle.jpg" alt="{{ distillery.name }}">
                             </a>
                             {% endif %}
                             <div class="card-body pb-0">
