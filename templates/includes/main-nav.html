@@ -11,8 +11,8 @@
                 <a href="{% url 'distilleries' %}" class="dropdown-item">All Distilleries</a>
                 <!--NOT REALLY SORT HERE BUT ONLY THOSE WHERE HAS_TOUR + TRUE-->
                 <a href="{% url 'distilleries' %}" class="dropdown-item ">Distilleries with tours</a>
-                <a href="{% url 'distilleries' %}?sort=location_province&direction=asc" class="dropdown-item">Distilleries by Province</a>
-                <a href="{% url 'distilleries' %}?sort=location_county&direction=asc" class="dropdown-item">Distilleries by County</a>
+                <a href="{% url 'distilleries' %}?sort=province&direction=asc" class="dropdown-item">Distilleries by Province</a>
+                <a href="{% url 'distilleries' %}?sort=county&direction=asc" class="dropdown-item">Distilleries by County</a>
                 <a href="{% url 'distilleries' %}?sort=rating&direction=desc" class="dropdown-item ">Distilleries by Rating</a>                
             </div>
         </li>
